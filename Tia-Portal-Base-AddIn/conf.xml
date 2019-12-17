@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<PackageConfiguration xmlns="http://www.siemens.com/automation/Openness/AddIn/Publisher/V16">
+  <Author>Rien Verbeke</Author>
+  <Description>This Add-In Is A Base example</Description>
+  <AddInVersion>V16</AddInVersion>
+  <Product>
+    <Name>Base Example</Name>
+    <Id>56165486</Id>
+    <Version>0.0.1.0</Version>
+  </Product>
+  <FeatureAssembly>
+    <AssemblyInfo>
+      <Assembly>.\bin\Debug\netstandard2.0\Tia-Portal-Base-AddIn.dll</Assembly>
+      <Pdb>.\bin\Debug\netstandard2.0\Tia-Portal-Base-AddIn.pdb</Pdb>
+    </AssemblyInfo>
+  </FeatureAssembly>
+  <DisplayInMultiuser />
+  <RequiredPermissions>
+    <TIAPermissions>
+      <TIA.ReadWrite />
+    </TIAPermissions>
+  </RequiredPermissions>
+</PackageConfiguration>

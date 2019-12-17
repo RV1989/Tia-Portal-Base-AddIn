@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Tia_Portal_Base_AddIn</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Siemens.Engineering.AddIn">
+      <HintPath>..\..\..\..\..\..\..\Program Files\Siemens\Automation\Portal V16\PublicAPI\V16.AddIn\Siemens.Engineering.AddIn.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="&quot;C:\Program Files\Siemens\Automation\Portal V16\PublicAPI\V16.AddIn\Siemens.Engineering.AddIn.Publisher.exe&quot;  --configuration $(ProjectDir)conf.xml -c -v -l $(TargetDir)log.txt -o $(TargetDir)$(TargetName).addin" />
+  </Target>
+
+</Project>
